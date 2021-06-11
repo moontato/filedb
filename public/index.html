@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileDB</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Local -->
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="list.js"></script>
+
+</head>
+<body>
+
+    <!-- NavBar -->
+    <nav style="width:100vw" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">FileDB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Files <span class="sr-only">(current)</span></a>
+            </li>
+        </div>
+    </nav>
+
+
+    <div id="UIContainer" style="padding-bottom:10%">
+        <h4 id="status"></h4>
+        <progress hidden="hidden" value="0" max="100" id="uploader">0%</progress>
+    
+        <div id="titleForm" class="col-auto">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Folder</div>
+                </div>
+                <input type="text" class="form-control" id="fileName" placeholder="File Name">
+            </div>
+            <p id="titleHelp">Please complete the field above before selecting files.</p>
+        </div>
+    
+        <form>
+            <label id="uploadButtonLabel" for="file-upload" class="custom-file-upload">
+                <div style="display:flex;flex-direction:row;">
+                    <i class="fas fa-upload" style="margin-right:5%"></i>
+                    <div style="white-space:nowrap;">Select Files</div>
+                </div>
+            </label>
+            <input id="file-upload" type="file"/>
+        </form>
+    
+        <div id="downloadLabel" style="margin-top:5%">Download:</div>
+        <div id="titlesBox" class="alert alert-dark">
+            <table id="titles">
+                <!-- Create New Table Elements -->
+            </table>
+        </div>
+    
+        
+        <!-- Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Folder?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div id="modalDescription" class="modal-body">
+                
+                </div>
+                <div class="modal-footer">
+                <button id="deleteCancel" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="deleteContinue" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase.js"></script>
+    <script src="external.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+#UIContainer{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+    padding:0;
+    margin:0;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background-color:rgb(44, 44, 44);
+}
+
+#titleForm{
+    margin-bottom:1%
+}
+
+#uploader{
+    width:50%;
+    margin-bottom:10px;
+}
+
+#status{
+    color:green;
+}
+
+#loginButton{
+    margin-top:50px;
+    margin-bottom:10%;
+    background-color:rgb(158, 158, 158)
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius:8px
+}
+
+table{
+    overflow-y:auto;
+    width:60vw;
+    height:20em;
+    display:block;
+}
+
+#titleHelp{
+    color:white;
+    font-size:80%;
+    text-align:center
+}
+
+#uploadButtonLabel{
+    background-color:slategray
+}
+
+#downloadLabel{
+    color:lightgray
+}
+
+hr{
+    width:100vw
+}

@@ -1,0 +1,26 @@
+body{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+    padding:0;
+    margin:0;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+#titleForm{
+    margin-bottom:2%;
+}
+
+#titlesBox{
+    margin-top:2%;
+}
+
+#uploadsButton{
+    margin-bottom:10%;
+}
+
+#loginButton{
+    margin-bottom:1%
+}

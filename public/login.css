@@ -1,0 +1,30 @@
+#loginContainer{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+    padding:0;
+    margin:0;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background-color:rgb(44, 44, 44);
+}
+
+#filesButton{
+    margin-bottom:75px;
+    background-color:rgb(158, 158, 158)
+}
+
+#buttonContainer{
+    display:flex;
+    justify-content:center;
+    width:200px
+}
+
+#btnLogin, #btnLogout{
+    background-color:rgb(158, 158, 158);
+}
+
+#formContainer{
+    background-color:rgb(230, 230, 230);
+}
