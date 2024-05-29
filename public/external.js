@@ -1,5 +1,5 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyD_4t2Ll_2KUArSSF3phpnRTad5laJVFdI",
+    apiKey: "",
     authDomain: "filedb-a8c1f.firebase.com",
     projectId: "filedb-a8c1f",
     storageBucket: "filedb-a8c1f.appspot.com",
